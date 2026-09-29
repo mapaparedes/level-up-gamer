@@ -114,13 +114,17 @@ formulario.addEventListener("submit", function(event) {
     const errorCorreo = document.getElementById("errorCorreo");
     const run = document.getElementById("run").value.trim();
     const errorRun = document.getElementById("errorRun");
-    const formulario = document.getElementById("formRegistro");
-    // Limpiamos el mensaje anterior
+    const direccion = document.getElementById("direccion").value.trim();
+    const errorDireccion = document.getElementById("errorDireccion"); 
+    const regionSeleccionada = document.getElementById("region").value;
+    const comunaSeleccionada = document.getElementById("comuna").value; 
+     // Limpiamos el mensaje anterior
     errorNombre.textContent = "";
     errorApellidos.textContent = "";
     errorCorreo.textContent = "";     
     errorRun.textContent = "";
     errorFecha.textContent = "";
+    errorDireccion.textContent = "";
     // Validar RUN
     if (run === "") {
     errorRun.textContent = "El RUN es obligatorio";
@@ -199,17 +203,35 @@ formulario.addEventListener("submit", function(event) {
 
      const mes = hoy.getMonth() - fechaNac.getMonth();
 
-    if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
-    edad--;
-  }
+    if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {edad--;}
 
     if (edad < 18) {
-    errorFecha.textContent = "Debes ser mayor de 18 años para registrarte";
+     errorFecha.textContent = "Debes ser mayor de 18 años para registrarte";return;}
+   
+
+
+     // Validar región
+    if (regionSeleccionada === "") {
+    alert("Debe seleccionar una región");
+    return;
+    }
+
+    // Validar comuna
+    if (comunaSeleccionada === "") {
+    alert("Debe seleccionar una comuna");
+    return;
+    }
+    // Validar dirección
+    if (direccion === "") {
+    errorDireccion.textContent = "La dirección es obligatoria";
+    return;
+    }
+
+   if (direccion.length > 300) {
+    errorDireccion.textContent = "La dirección no puede superar los 300 caracteres";
     return;
    }
-
-
      
-
+   alert("Usuario registrado correctamente");
 
 });
