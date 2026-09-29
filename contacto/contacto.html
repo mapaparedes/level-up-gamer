@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto - Level-Up Gamer</title>
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="contacto.css">
+</head>
+
+<body>
+
+    <main>
+
+        <h1>Contacto</h1>
+
+        <p class="subtitulo">
+            ¿Necesitas ayuda? Envíanos un mensaje.
+        </p>
+
+        <!-- Formulario de contacto -->
+        <form id="formContacto">
+
+            <!-- Nombre -->
+            <label for="nombre">Nombre:</label>
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Ingrese su nombre"
+            >
+
+            <span id="errorNombre"></span>
+
+
+            <!-- Correo -->
+            <label for="correo">Correo:</label>
+
+            <input
+                type="email"
+                id="correo"
+                placeholder="Ingrese su correo"
+            >
+
+            <span id="errorCorreo"></span>
+
+
+            <!-- Comentario -->
+            <label for="comentario">Comentario:</label>
+
+            <textarea
+                id="comentario"
+                placeholder="Escriba su mensaje"
+            ></textarea>
+
+            <span id="errorComentario"></span>
+
+
+            <!-- Botón -->
+            <button type="submit">
+                Enviar mensaje
+            </button>
+
+        </form>
+
+        <!-- Volver al inicio -->
+        <a class="volver" href="../index.html">
+            Volver al inicio
+        </a>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="contacto.js"></script>
+
+</body>
+
+</html>

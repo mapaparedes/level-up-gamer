@@ -18,7 +18,7 @@ body {
             rgba(0, 0, 0, 0.15),
             rgba(0, 0, 0, 0.25)
         ),
-        url("img/login-cthulhu.png");
+        url("../img/login-cthulhu.png");
 
     background-size: cover;
     background-position: center;
@@ -174,4 +174,4 @@ a:hover {
         width: 92%;
         padding: 15px;
     }
-}
+}   

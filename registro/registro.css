@@ -10,7 +10,7 @@ body {
     color: #FFFFFF;
 
     /* Fondo de la página */
-    background-image: url("img/fondo-verde.png");
+    background-image: url("../img/login-cthulhu.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
