@@ -94,3 +94,68 @@ footer {
     text-align: center;
     border-top: 1px solid #1E90FF;
 }
+
+/* Organiza las tarjetas y permite que pasen a otra fila */
+.lista-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* Apariencia de cada tarjeta */
+.tarjeta-producto {
+    background-color: #202020;
+    border: 1px solid #1E90FF;
+    border-radius: 8px;
+    padding: 20px;
+
+    /* Ancho habitual, limitado por el espacio disponible */
+    width: 300px;
+    max-width: 100%;
+}
+
+/* Imagen del producto dentro de la tarjeta */
+.imagen-producto {
+    display: block;
+    width: 100%;
+    height: 200px;
+
+    /* Muestra la imagen completa sin deformarla */
+    object-fit: contain;
+
+    background-color: #FFFFFF;
+    border-radius: 6px;
+}
+
+/* Nombre del producto */
+.tarjeta-producto h3 {
+    margin: 16px 0 8px;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+/* Precio destacado */
+.precio-producto {
+    color: #39FF14;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Apariencia del botón para agregar al carrito */
+.boton-agregar {
+    width: 100%;
+    padding: 12px;
+    background-color: #39FF14;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Indica visualmente que el botón aún no está disponible */
+.boton-agregar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

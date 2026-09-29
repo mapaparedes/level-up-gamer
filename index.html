@@ -36,10 +36,50 @@
      </section>
 
      <!-- Presentación de los productos -->
-     <section id="productos">
-        <h2>Nuestros Productos</h2>
-        <p>Explora nuestro catalogo de productos Gamer</p>
-     </section>
+     <!-- Catálogo de productos de la tienda -->
+<section id="productos">
+    <h2>Nuestros productos</h2>
+    <p>Explora nuestro catálogo de productos para gamers.</p>
+
+    <!-- Contenedor donde agruparemos las tarjetas -->
+    <div class="lista-productos">
+
+        <!-- Cada article representa un producto del catálogo -->
+        <article class="tarjeta-producto">
+
+            <!-- Imagen del producto y descripción alternativa -->
+            <img
+                src="img/catan.jpg"
+                alt="Caja del juego de mesa Catan"
+                class="imagen-producto"
+            >
+
+            <!-- Nombre del producto -->
+            <h3>Catan</h3>
+
+            <!-- Descripción breve -->
+            <p>
+                Juego de estrategia donde los jugadores compiten
+                por colonizar la isla de Catan. Ideal para compartir
+                con amigos o en familia.
+            </p>
+
+            <!-- Precio de ejemplo para esta demostración -->
+            <p class="precio-producto">$29.990 CLP</p>
+
+            <!-- Botón deshabilitado hasta implementar el carrito -->
+            <button
+                type="button"
+                class="boton-agregar"
+                disabled
+            >
+                Agregar al carrito
+            </button>
+
+        </article>
+
+    </div>
+</section>
 
      <!-- Información de la tienda -->
      <section id="nosotros">
