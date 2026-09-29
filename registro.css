@@ -1,0 +1,146 @@
+/* Diseño general de la página */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+
+    /* Fondo de la página */
+    background-image: url("img/fondo-verde.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* Centra el contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Imagen principal de REGISTRO */
+.imagen-registro {
+    width: 330px;
+    max-width: 80%;
+    height: auto;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* Caja del formulario */
+form {
+    width: 500px;
+    max-width: 90%;
+
+    background-color: rgba(11, 11, 11, 0.95);
+
+    /* Formulario más compacto */
+    padding: 15px 25px;
+    margin-bottom: 10px;
+
+    border: 2px solid #39FF14;
+    border-radius: 10px;
+
+    /* Brillo verde */
+    box-shadow: 0 0 15px #39FF14;
+}
+
+
+/* Texto de los campos */
+label {
+    display: block;
+
+    margin-top: 5px;
+    margin-bottom: 3px;
+
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* Campos del formulario */
+input,
+select {
+    width: 100%;
+    height: 36px;
+
+    padding: 6px 10px;
+    margin: 0;
+
+    background-color: #202020;
+    color: #FFFFFF;
+
+    border: 1px solid #39FF14;
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+
+/* Efecto al seleccionar un campo */
+input:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 7px #39FF14;
+}
+
+
+/* Mensajes de error */
+span {
+    display: block;
+
+    min-height: 14px;
+    margin: 1px 0;
+
+    color: #ff5252;
+    font-size: 12px;
+}
+
+
+/* Botón Registrarse */
+button {
+    width: 100%;
+
+    padding: 9px;
+    margin-top: 5px;
+
+    background-color: #39FF14;
+    color: #000000;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Efecto del botón */
+button:hover {
+    background-color: #1E90FF;
+    box-shadow: 0 0 12px #39FF14;
+}
+
+
+/* Diseño para celulares */
+@media (max-width: 600px) {
+
+    .imagen-registro {
+        width: 250px;
+    }
+
+    form {
+        width: 94%;
+        padding: 15px;
+    }
+}

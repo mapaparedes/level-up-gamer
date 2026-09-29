@@ -4,55 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - Level-Up Gamer</title>
+    <link rel="stylesheet" href="registro.css">
 </head>
 
-<body>
 
-    <h1>Registro de Usuario</h1>
+<body>
+   <!-- Imagen principal del registro -->
+     <img src="img/registro-dragon.png"
+     alt="Registro"
+     class="imagen-registro">
+
+     
+
+ 
 
     <form id="formRegistro">
 
         <label for="run">RUN:</label>
         <input type="text" id="run" placeholder="Ej: 19011022K">
         <span id="errorRun"></span>
-        <br><br>
-
+          
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre">
         <span id="errorNombre"></span>
-        <br><br>
+       
 
         <label for="apellidos">Apellidos:</label>
         <input type="text" id="apellidos">
         <span id="errorApellidos"></span>
-        <br><br>
-
+         
         <label for="correo">Correo:</label>
         <input type="email" id="correo">
         <span id="errorCorreo"></span>
-        <br><br>
+         
 
         <label for="fechaNacimiento">Fecha de nacimiento:</label>
         <input type="date" id="fechaNacimiento">
         <span id="errorFecha"></span>
-        <br><br>
+         
 
         <label for="region">Región:</label>
         <select id="region">
             <option value="">Seleccione una región</option>
         </select>
-        <br><br>
+        
 
         <label for="comuna">Comuna:</label>
         <select id="comuna">
             <option value="">Seleccione una comuna</option>
         </select>
-        <br><br>
+         
 
         <label for="direccion">Dirección:</label>
         <input type="text" id="direccion">
         <span id="errorDireccion"></span>
-        <br><br>
+         
 
         <button type="submit">Registrarse</button>
 
