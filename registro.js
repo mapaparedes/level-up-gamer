@@ -47,7 +47,8 @@ formulario.addEventListener("submit", function(event) {
 
     // Evita que el formulario se envíe automáticamente
     event.preventDefault();
-
+    const fechaNacimiento = document.getElementById("fechaNacimiento").value;
+    const errorFecha = document.getElementById("errorFecha");
     const nombre = document.getElementById("nombre").value.trim();
     const errorNombre = document.getElementById("errorNombre");
     const apellidos = document.getElementById("apellidos").value.trim();
@@ -62,7 +63,7 @@ formulario.addEventListener("submit", function(event) {
     errorApellidos.textContent = "";
     errorCorreo.textContent = "";     
     errorRun.textContent = "";
-    
+    errorFecha.textContent = "";
     // Validar RUN
     if (run === "") {
     errorRun.textContent = "El RUN es obligatorio";
@@ -126,7 +127,32 @@ formulario.addEventListener("submit", function(event) {
         "Solo se permiten correos @duoc.cl, @profesor.duoc.cl o @gmail.com";
     return;
     }
-    alert("Nombre válido");
+
+
+    // Validar mayoría de edad
+    if (fechaNacimiento === "") {
+    errorFecha.textContent = "Ingrese su fecha de nacimiento";
+    return;
+    }
+ 
+     const fechaNac = new Date(fechaNacimiento + "T00:00:00");
+     const hoy = new Date();
+
+     let edad = hoy.getFullYear() - fechaNac.getFullYear();
+
+     const mes = hoy.getMonth() - fechaNac.getMonth();
+
+    if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
+    edad--;
+  }
+
+    if (edad < 18) {
+    errorFecha.textContent = "Debes ser mayor de 18 años para registrarte";
+    return;
+   }
+
+
+     
 
 
 });
