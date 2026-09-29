@@ -1,0 +1,96 @@
+/* Incluye el relleno y el borde dentro del ancho de cada elemento */
+* {
+    box-sizing: border-box;
+}
+
+/* Apariencia general de la página */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Color de los títulos de las secciones */
+h2 {
+    color: #39FF14;
+}
+
+/* Color secundario para los párrafos */
+p {
+    color: #D3D3D3;
+}
+
+/* Encabezado principal de la tienda */
+header {
+    background-color: #151515;
+    padding: 24px 16px;
+    text-align: center;
+    border-bottom: 3px solid #1E90FF;
+}
+
+/* Título de la tienda dentro del encabezado */
+header h1 {
+    margin: 0;
+    color: #39FF14;
+}
+
+/* Lista de enlaces del menú */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+
+    /* Distribuye los elementos del menú en una fila */
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    /* Permite crear otra fila si falta espacio */
+    flex-wrap: wrap;
+}
+
+/* Apariencia de cada enlace del menú */
+nav a {
+    display: inline-block;
+    padding: 10px 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 1px solid #1E90FF;
+    border-radius: 6px;
+}
+
+/* Resalta el enlace con el mouse o al navegar con el teclado */
+nav a:hover,
+nav a:focus-visible {
+    background-color: #1E90FF;
+    color: #000000;
+}
+
+/* Contenedor del contenido principal */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+/* Bloques de contenido de la página */
+section {
+    background-color: #151515;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+}
+
+/* Elimina el espacio superior del título de cada sección */
+section h2 {
+    margin-top: 0;
+}
+
+/* Pie de página */
+footer {
+    padding: 20px 16px;
+    text-align: center;
+    border-top: 1px solid #1E90FF;
+}
