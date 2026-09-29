@@ -1,3 +1,60 @@
+    //REGIONES
+    const regionesComunas = {
+    "Metropolitana": [
+        "Santiago",
+        "Puente Alto",
+        "Maipú",
+        "La Florida",
+        "Las Condes"],
+
+    "Valparaíso": [
+        "Valparaíso",
+        "Viña del Mar",
+        "Quilpué",
+        "Villa Alemana"],
+
+    "Biobío": [
+        "Concepción",
+        "Talcahuano",
+        "Los Ángeles",
+        "Coronel"]
+    };
+
+    const region = document.getElementById("region");
+
+    for (const nombreRegion in regionesComunas) {
+    const opcion = document.createElement("option");
+
+    opcion.value = nombreRegion;
+    opcion.textContent = nombreRegion;
+
+    region.appendChild(opcion);
+    }
+
+    // COMUNAS
+    const comuna = document.getElementById("comuna");
+
+
+    region.addEventListener("change", function() {
+
+    // Limpiar las comunas anteriores
+    comuna.innerHTML = '<option value="">Seleccione una comuna</option>';
+
+    const regionSeleccionada = region.value;
+
+    if (regionSeleccionada !== "") {
+
+        regionesComunas[regionSeleccionada].forEach(function(nombreComuna) {
+
+            const opcion = document.createElement("option");
+
+            opcion.value = nombreComuna;
+            opcion.textContent = nombreComuna;
+
+            comuna.appendChild(opcion);
+        });
+    }
+});
 const formulario = document.getElementById("formRegistro");
 
 function validarRun(run) {
@@ -57,7 +114,7 @@ formulario.addEventListener("submit", function(event) {
     const errorCorreo = document.getElementById("errorCorreo");
     const run = document.getElementById("run").value.trim();
     const errorRun = document.getElementById("errorRun");
-
+    const formulario = document.getElementById("formRegistro");
     // Limpiamos el mensaje anterior
     errorNombre.textContent = "";
     errorApellidos.textContent = "";
