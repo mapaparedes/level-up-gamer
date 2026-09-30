@@ -605,3 +605,29 @@ btnCancelar.addEventListener(
 // ===============================
 
 mostrarProductos();
+
+// ==========================================
+// CERRAR SESIÓN
+// ==========================================
+
+const btnCerrarSesion =
+    document.getElementById("cerrar-sesion");
+
+if (btnCerrarSesion) {
+
+    btnCerrarSesion.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+            // Eliminar la sesión
+            localStorage.removeItem("usuarioActivo");
+
+            // Volver al login
+            window.location.replace(
+                "../login/login.html"
+            );
+        }
+    );
+}
