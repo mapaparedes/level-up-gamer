@@ -68,12 +68,11 @@ inputPassword.addEventListener("input", function () {
 });
 
 
-// Validar todo al presionar Iniciar Sesión
+// Validar al iniciar sesión
 formLogin.addEventListener("submit", function (event) {
 
-    // Evita que la página se recargue
     event.preventDefault();
-    // Limpia los mensajes del intento anterior
+
     errorCorreo.textContent = "";
     errorPassword.textContent = "";
 
@@ -137,9 +136,65 @@ formLogin.addEventListener("submit", function (event) {
     }
 
 
-    // Si todo está correcto
-    if (formularioValido) {
-
-        alert("Inicio de sesión correcto");
+    // Si las validaciones fallan, detenemos el proceso
+    if (!formularioValido) {
+        return;
     }
+
+
+    // Obtenemos los usuarios creados desde el administrador
+    const usuarios =
+        JSON.parse(localStorage.getItem("usuariosAdmin")) || [];
+
+
+    // Buscamos un usuario que coincida con correo y contraseña
+    const usuarioEncontrado = usuarios.find(function (usuario) {
+
+        return (
+            usuario.correo.toLowerCase() === correo.toLowerCase() &&
+            usuario.password === password
+        );
+
+    });
+
+
+    // Si no existe
+    if (!usuarioEncontrado) {
+
+        errorPassword.textContent =
+            "Correo o contraseña incorrectos";
+
+        return;
+    }
+
+
+    // Guardamos la sesión del usuario
+    localStorage.setItem(
+        "usuarioActivo",
+        JSON.stringify(usuarioEncontrado)
+    );
+
+
+    alert(
+        "Bienvenido " + usuarioEncontrado.nombre
+    );
+
+
+  // Redirección según el rol
+if (usuarioEncontrado.rol === "Administrador") {
+
+    window.location.href =
+        "../admin/admin.html";
+
+} else if (usuarioEncontrado.rol === "Vendedor") {
+
+    window.location.href =
+        "../vendedor/vendedor.html";
+
+} else {
+
+    // Cliente
+    window.location.href =
+        "../index.html";
+}
 });
