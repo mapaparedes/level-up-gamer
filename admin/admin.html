@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administrador - Level-Up Gamer</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- Menú lateral del administrador -->
+    <aside class="menu-admin">
+
+        <h2>LEVEL-UP</h2>
+        <p>ADMIN</p>
+
+        <nav>
+
+            <a href="admin.html">
+                🏠 Inicio
+            </a>
+
+            <a href="productos-admin.html">
+                🎮 Productos
+            </a>
+
+            <a href="usuarios-admin.html">
+                👥 Usuarios
+            </a>
+
+            <a href="../index.html">
+                🛒 Ver tienda
+            </a>
+
+            <a href="#" id="cerrar-sesion">
+                🚪 Cerrar sesión
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- Contenido principal -->
+    <main class="contenido-admin">
+
+        <header class="encabezado-admin">
+
+            <h1>Panel de Administración</h1>
+
+            <p>
+                Administración de Level-Up Gamer
+            </p>
+
+        </header>
+
+
+        <section class="bienvenida">
+
+            <h2>Bienvenido, Administrador</h2>
+
+            <p>
+                Desde este panel puedes administrar
+                los productos y usuarios de la tienda.
+            </p>
+
+
+            <!-- Tarjetas principales -->
+            <div class="tarjetas-admin">
+
+                <!-- PRODUCTOS -->
+                <div class="tarjeta">
+
+                    <h3>🎮 Productos</h3>
+
+                    <p>
+                        Agrega, consulta y administra
+                        los productos de Level-Up Gamer.
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="window.location.href='productos-admin.html'"
+                    >
+                        Administrar productos
+                    </button>
+
+                </div>
+
+
+                <!-- USUARIOS -->
+                <div class="tarjeta">
+
+                    <h3>👥 Usuarios</h3>
+
+                    <p>
+                        Consulta y administra los
+                        usuarios registrados.
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="window.location.href='usuarios-admin.html'"
+                    >
+                        Administrar usuarios
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

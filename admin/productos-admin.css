@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #080808;
+    color: #FFFFFF;
+
+    display: flex;
+}
+
+
+/* ==========================
+   MENÚ
+========================== */
+
+.menu-admin {
+    width: 250px;
+    min-height: 100vh;
+
+    background-color: #111111;
+
+    border-right: 2px solid #39FF14;
+
+    padding: 30px 20px;
+
+    box-shadow:
+        5px 0 20px rgba(57, 255, 20, 0.25);
+}
+
+
+.menu-admin h2 {
+    margin: 0;
+
+    color: #39FF14;
+
+    text-align: center;
+
+    font-size: 28px;
+
+    text-shadow:
+        0 0 10px #39FF14;
+}
+
+
+.menu-admin > p {
+    margin-top: 5px;
+    margin-bottom: 40px;
+
+    color: #1E90FF;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.menu-admin nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.menu-admin nav a {
+    padding: 13px;
+
+    color: #FFFFFF;
+
+    background-color: #202020;
+
+    border-left: 4px solid #39FF14;
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.menu-admin nav a:hover {
+    color: #39FF14;
+
+    transform: translateX(5px);
+
+    box-shadow:
+        0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+
+/* ==========================
+   CONTENIDO
+========================== */
+
+.contenido {
+    flex: 1;
+
+    padding: 35px;
+
+    overflow-x: hidden;
+}
+
+
+header {
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #39FF14;
+}
+
+
+header h1 {
+    margin: 0;
+
+    color: #39FF14;
+
+    font-size: 35px;
+
+    text-shadow:
+        0 0 10px rgba(57, 255, 20, 0.6);
+}
+
+
+header p {
+    color: #D3D3D3;
+}
+
+
+/* ==========================
+   FORMULARIO
+========================== */
+
+.formulario-contenedor {
+    max-width: 850px;
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background-color: #151515;
+
+    border: 2px solid #39FF14;
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 15px rgba(57, 255, 20, 0.25);
+}
+
+
+.formulario-contenedor h2 {
+    margin-top: 0;
+
+    color: #1E90FF;
+}
+
+
+label {
+    display: block;
+
+    margin-top: 12px;
+    margin-bottom: 5px;
+
+    font-weight: bold;
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 11px;
+
+    background-color: #202020;
+    color: #FFFFFF;
+
+    border: 1px solid #39FF14;
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+
+textarea {
+    min-height: 90px;
+
+    resize: vertical;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+
+    border-color: #1E90FF;
+
+    box-shadow:
+        0 0 7px #1E90FF;
+}
+
+
+/* ERRORES */
+
+.error {
+    display: block;
+
+    min-height: 18px;
+
+    margin-top: 3px;
+
+    color: #ff5252;
+
+    font-size: 13px;
+}
+
+
+/* BOTONES */
+
+.botones-formulario {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+button {
+    padding: 11px 18px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#btn-guardar {
+    background-color: #39FF14;
+    color: #000000;
+}
+
+
+#btn-guardar:hover {
+    background-color: #1E90FF;
+    color: #FFFFFF;
+
+    box-shadow:
+        0 0 12px #1E90FF;
+}
+
+
+.btn-cancelar {
+    background-color: #555555;
+    color: #FFFFFF;
+}
+
+
+.btn-cancelar:hover {
+    background-color: #777777;
+}
+
+
+/* ==========================
+   TABLA
+========================== */
+
+.listado {
+    margin-top: 40px;
+}
+
+
+.listado h2 {
+    color: #1E90FF;
+}
+
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: #151515;
+}
+
+
+th,
+td {
+    padding: 14px;
+
+    border-bottom: 1px solid #333333;
+
+    text-align: left;
+}
+
+
+th {
+    color: #39FF14;
+
+    background-color: #202020;
+}
+
+
+.btn-editar {
+    margin-right: 5px;
+
+    background-color: #1E90FF;
+    color: #FFFFFF;
+}
+
+
+.btn-eliminar {
+    background-color: #ff3b3b;
+    color: #FFFFFF;
+}
+
+
+.btn-editar:hover,
+.btn-eliminar:hover {
+    transform: scale(1.05);
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 750px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .menu-admin {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .contenido {
+        padding: 20px;
+    }
+
+    .botones-formulario {
+        flex-direction: column;
+    }
+
+}
