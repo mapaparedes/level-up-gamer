@@ -131,6 +131,16 @@ button:hover {
     box-shadow: 0 0 12px #39FF14;
 }
 
+.volver-inicio {
+    color: #39FF14;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.volver-inicio:hover {
+    text-decoration: underline;
+}
+
 
 /* Diseño para celulares */
 @media (max-width: 600px) {
