@@ -6,12 +6,12 @@
 // ============================================================
 const productos = [
     {
-        nombre: "Consola Next-Gen 1TB",
+        nombre: "Consola PlayStation 5 1TB",
         categoria: "Consolas",
         descripcion: "Consola de última generación con juegos en 4K.",
         precio: 549990,
         icono: "🎮",
-        imagen: ""
+        imagen: "../img/ps5.jpeg"
     },
     {
         nombre: "Control Inalámbrico Pro",
@@ -19,7 +19,7 @@ const productos = [
         descripcion: "Control ergonómico con vibración y batería de larga duración.",
         precio: 64990,
         icono: "🕹️",
-        imagen: ""
+        imagen: "../img/control.jpeg"
     },
     {
         nombre: "Teclado Mecánico RGB",
@@ -27,7 +27,7 @@ const productos = [
         descripcion: "Switches mecánicos e iluminación RGB personalizable.",
         precio: 59990,
         icono: "⌨️",
-        imagen: ""
+        imagen: "../img/teclado.jpg"
     },
     {
         nombre: "Mouse Gamer 16000 DPI",
@@ -35,7 +35,7 @@ const productos = [
         descripcion: "Sensor de alta precisión y 7 botones programables.",
         precio: 29990,
         icono: "🖱️",
-        imagen: ""
+        imagen: "../img/mouse.jpeg"
     },
     {
         nombre: "Audífonos Gamer 7.1",
@@ -43,7 +43,7 @@ const productos = [
         descripcion: "Sonido envolvente con micrófono con cancelación de ruido.",
         precio: 49990,
         icono: "🎧",
-        imagen: ""
+        imagen: "../img/audifonos.jpeg"
     },
     {
         nombre: "Monitor Gamer 27\" 144Hz",
@@ -51,7 +51,7 @@ const productos = [
         descripcion: "Pantalla QHD con 1 ms de respuesta y 144Hz.",
         precio: 219990,
         icono: "🖥️",
-        imagen: ""
+        imagen: "../img/monitor.jpeg"
     },
     {
         nombre: "PC Gamer Ryzen 7 + RTX",
@@ -59,7 +59,7 @@ const productos = [
         descripcion: "Computador armado listo para jugar en alto rendimiento.",
         precio: 1299990,
         icono: "💻",
-        imagen: ""
+        imagen: "../img/pc-gamer.jpg"
     },
     {
         nombre: "Silla Gamer Ergonómica",
@@ -67,7 +67,7 @@ const productos = [
         descripcion: "Respaldo reclinable, soporte lumbar y apoyabrazos 4D.",
         precio: 189990,
         icono: "💺",
-        imagen: ""
+        imagen: "../img/silla.jpeg"
     },
     {
         nombre: "Mousepad XL Gamer",
@@ -75,7 +75,7 @@ const productos = [
         descripcion: "Superficie extendida con base antideslizante y bordes cosidos.",
         precio: 14990,
         icono: "🟩",
-        imagen: ""
+        imagen: "../img/mousepad.jpeg"
     }
 ];
 
