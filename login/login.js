@@ -73,6 +73,9 @@ formLogin.addEventListener("submit", function (event) {
 
     // Evita que la página se recargue
     event.preventDefault();
+    // Limpia los mensajes del intento anterior
+    errorCorreo.textContent = "";
+    errorPassword.textContent = "";
 
     const correo = inputCorreo.value.trim();
     const password = inputPassword.value;
