@@ -1,0 +1,191 @@
+/* Configuración general */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Página completa */
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+
+    /* Fondo Cthulhu */
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("../img/login-cthulhu.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Deja visible el logo del fondo */
+    padding-top: 280px;
+}
+
+
+/* Título */
+h2 {
+    color: #e4b50b;
+    margin: 0 0 10px 0;
+
+    text-shadow: 0 0 10px #39FF14;
+}
+
+
+/* Caja del formulario */
+form {
+    width: 400px;
+    max-width: 90%;
+
+    background-color: rgba(10, 10, 10, 0.88);
+
+    padding: 20px;
+
+    border: 2px solid #39FF14;
+    border-radius: 10px;
+
+    box-shadow: 0 0 15px #39FF14;
+}
+
+
+/* Texto de Correo y Contraseña */
+label {
+    display: block;
+
+    margin-top: 5px;
+    margin-bottom: 4px;
+
+    font-weight: bold;
+}
+
+
+/* Cuadros de correo y contraseña */
+input {
+    width: 100%;
+    height: 36px;
+
+    padding: 6px 10px;
+
+    background-color: #202020;
+    color: #FFFFFF;
+
+    border: 2px solid #39FF14;
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    box-shadow: 0 0 6px rgba(57, 255, 20, 0.5);
+}
+
+
+/* Texto dentro de los cuadros */
+input::placeholder {
+    color: #D3D3D3;
+}
+
+
+/* Efecto al seleccionar un campo */
+input:focus {
+    outline: none;
+
+    border-color: #39FF14;
+    box-shadow: 0 0 12px #39FF14;
+}
+
+
+/* Espacio para mensajes de error */
+span {
+    display: block;
+
+    min-height: 16px;
+    margin-top: 2px;
+
+    color: #ff5252;
+    font-size: 12px;
+}
+
+
+/* Botón */
+button {
+    width: 100%;
+
+    padding: 10px;
+    margin-top: 5px;
+
+    background-color: #39FF14;
+    color: #000000;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Efecto del botón */
+button:hover {
+    background-color: #39FF14;
+    box-shadow: 0 0 15px #39FF14;
+}
+
+
+/* Texto inferior */
+p {
+    margin-top: 12px;
+
+    color: #FFFFFF;
+}
+
+
+/* Enlace Registrarse */
+a {
+    color: #eff2ef;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* Logo de inicio de sesión */
+
+.logo-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logo-login img {
+    display: block;
+    width: 320px;
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+}
+/* Diseño para celular */
+@media (max-width: 600px) {
+
+    body {
+        padding-top: 220px;
+    }
+
+    form {
+        width: 92%;
+        padding: 15px;
+    }
+}   

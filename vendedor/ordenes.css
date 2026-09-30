@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+
+/* MENÚ */
+
+.menu {
+    width: 250px;
+    min-height: 100vh;
+    background: #0a0a0a;
+    border-right: 2px solid #39ff14;
+    padding: 30px 20px;
+}
+
+.menu h2 {
+    color: #39ff14;
+    text-align: center;
+}
+
+.rol {
+    text-align: center;
+    color: #aaa;
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.menu a:hover,
+.menu a.activo {
+    background: #39ff14;
+    color: black;
+}
+
+
+/* CONTENIDO */
+
+.contenido {
+    flex: 1;
+    padding: 50px;
+}
+
+.contenido h1 {
+    color: #39ff14;
+    font-size: 35px;
+}
+
+.subtitulo {
+    color: #bbb;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+
+/* TABLA */
+
+.tabla-contenedor {
+    background: #101010;
+    border: 2px solid #39ff14;
+    border-radius: 12px;
+    padding: 20px;
+    overflow-x: auto;
+
+    box-shadow:
+        0 0 15px rgba(57, 255, 20, 0.25);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    color: #39ff14;
+}
+
+td {
+    color: #ddd;
+}
+
+.estado {
+    color: #39ff14;
+    font-weight: bold;
+}
+
+
+/* BOTÓN DETALLE */
+
+.btn-detalle {
+    background: #39ff14;
+    color: black;
+    border: none;
+    padding: 9px 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-detalle:hover {
+    background: white;
+}
+
+
+/* SIN ÓRDENES */
+
+.sin-ordenes {
+    text-align: center;
+    padding: 30px;
+    color: #aaa;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    body {
+        display: block;
+    }
+
+    .menu {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .contenido {
+        padding: 25px;
+    }
+}

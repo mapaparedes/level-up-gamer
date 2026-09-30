@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administrar Productos - Level-Up Gamer</title>
+
+    <link rel="stylesheet" href="productos-admin.css">
+</head>
+
+<body>
+
+    <!-- MENÚ LATERAL -->
+    <aside class="menu-admin">
+
+        <h2>LEVEL-UP</h2>
+        <p>ADMIN</p>
+
+        <nav>
+            <a href="admin.html">🏠 Inicio</a>
+            <a href="productos-admin.html">🎮 Productos</a>
+            <a href="usuarios-admin.html">👥 Usuarios</a>
+            <a href="../index.html">🛒 Ver tienda</a>
+            <a href="#" id="cerrar-sesion">🚪 Cerrar sesión
+</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido">
+
+        <header>
+            <h1>Administrar Productos</h1>
+
+            <p>
+                Agrega, edita o elimina productos de Level-Up Gamer.
+            </p>
+        </header>
+
+
+        <!-- FORMULARIO -->
+        <section class="formulario-contenedor">
+
+            <h2 id="titulo-formulario">
+                Nuevo producto
+            </h2>
+
+            <form id="form-producto">
+
+                <!-- Guarda el índice cuando editamos -->
+                <input
+                    type="hidden"
+                    id="indice-producto"
+                >
+
+
+                <!-- NOMBRE -->
+                <label for="nombre">
+                    Nombre del producto *
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    maxlength="100"
+                    placeholder="Ej: Teclado Gamer"
+                >
+
+                <span
+                    class="error"
+                    id="error-nombre"
+                ></span>
+
+
+                <!-- DESCRIPCIÓN -->
+                <label for="descripcion">
+                    Descripción
+                </label>
+
+                <textarea
+                    id="descripcion"
+                    maxlength="500"
+                    placeholder="Descripción del producto (opcional)"
+                ></textarea>
+
+                <span
+                    class="error"
+                    id="error-descripcion"
+                ></span>
+
+
+                <!-- PRECIO -->
+                <label for="precio">
+                    Precio *
+                </label>
+
+                <input
+                    type="number"
+                    id="precio"
+                    min="0"
+                    step="any"
+                    placeholder="Ej: 49990"
+                >
+
+                <span
+                    class="error"
+                    id="error-precio"
+                ></span>
+
+
+                <!-- STOCK -->
+                <label for="stock">
+                    Stock *
+                </label>
+
+                <input
+                    type="number"
+                    id="stock"
+                    min="0"
+                    step="1"
+                    placeholder="Ej: 20"
+                >
+
+                <span
+                    class="error"
+                    id="error-stock"
+                ></span>
+
+
+                <!-- STOCK CRÍTICO -->
+                <label for="stock-critico">
+                    Stock crítico
+                </label>
+
+                <input
+                    type="number"
+                    id="stock-critico"
+                    min="0"
+                    step="1"
+                    placeholder="Ej: 5"
+                >
+
+                <span
+                    class="error"
+                    id="error-stock-critico"
+                ></span>
+
+
+                <!-- CATEGORÍA -->
+                <label for="categoria">
+                    Categoría *
+                </label>
+
+                <select id="categoria">
+
+                    <option value="">
+                        Seleccione una categoría
+                    </option>
+
+                    <option value="Juegos">
+                        Juegos
+                    </option>
+
+                    <option value="Consolas">
+                        Consolas
+                    </option>
+
+                    <option value="Accesorios">
+                        Accesorios
+                    </option>
+
+                    <option value="Computadores Gamer">
+                        Computadores Gamer
+                    </option>
+
+                    <option value="Sillas Gamer">
+                        Sillas Gamer
+                    </option>
+
+                    <option value="Mouse">
+                        Mouse
+                    </option>
+
+                    <option value="Mousepad">
+                        Mousepad
+                    </option>
+
+                </select>
+
+                <span
+                    class="error"
+                    id="error-categoria"
+                ></span>
+
+
+                <!-- IMAGEN -->
+                <label for="imagen">
+                    Imagen
+                </label>
+
+                <input
+                    type="file"
+                    id="imagen"
+                    accept="image/*"
+                >
+
+                <span
+                    class="error"
+                    id="error-imagen"
+                ></span>
+
+
+                <!-- BOTONES -->
+                <div class="botones-formulario">
+
+                    <button
+                        type="submit"
+                        id="btn-guardar"
+                    >
+                        Guardar producto
+                    </button>
+
+                    <button
+                        type="button"
+                        id="btn-cancelar"
+                        class="btn-cancelar"
+                    >
+                        Cancelar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- LISTADO -->
+        <section class="listado">
+
+            <h2>
+                Productos registrados
+            </h2>
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Stock crítico</th>
+                            <th>Categoría</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabla-productos">
+                        <!-- JavaScript carga los productos -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="productos-admin.js"></script>
+
+</body>
+
+</html>

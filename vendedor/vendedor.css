@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+
+/* MENÚ */
+
+.menu {
+    width: 250px;
+    min-height: 100vh;
+    background: #0a0a0a;
+    border-right: 2px solid #39ff14;
+    padding: 30px 20px;
+}
+
+.menu h2 {
+    color: #39ff14;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.rol {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 35px;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.menu a:hover {
+    background: #39ff14;
+    color: black;
+}
+
+.menu .deshabilitado {
+    color: #777;
+}
+
+
+/* CONTENIDO */
+
+.contenido {
+    flex: 1;
+    padding: 50px;
+}
+
+.contenido h1 {
+    color: #39ff14;
+    font-size: 35px;
+}
+
+.bienvenida {
+    margin-top: 10px;
+    color: #bbb;
+}
+
+
+/* TARJETAS */
+
+.tarjetas {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    width: 320px;
+    background: #101010;
+    border: 2px solid #39ff14;
+    border-radius: 12px;
+    padding: 30px;
+
+    box-shadow:
+        0 0 15px rgba(57, 255, 20, 0.25);
+}
+
+.tarjeta h2 {
+    color: #39ff14;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+button {
+    background: #39ff14;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: white;
+}
+
+button:disabled {
+    background: #555;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    body {
+        display: block;
+    }
+
+    .menu {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .contenido {
+        padding: 25px;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
+}
