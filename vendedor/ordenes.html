@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Órdenes - Level-Up Gamer</title>
+
+    <link rel="stylesheet" href="ordenes.css">
+</head>
+
+<body>
+
+    <aside class="menu">
+
+        <h2>LEVEL-UP</h2>
+        <p class="rol">VENDEDOR</p>
+
+        <a href="vendedor.html">
+            🏠 Inicio
+        </a>
+
+        <a href="../index.html">
+            🎮 Productos
+        </a>
+
+        <a href="ordenes.html" class="activo">
+            📦 Órdenes
+        </a>
+
+        <a href="#" id="cerrar-sesion">
+            🚪 Cerrar sesión
+        </a>
+
+    </aside>
+
+
+    <main class="contenido">
+
+        <h1>Órdenes de compra</h1>
+
+        <p class="subtitulo">
+            Listado de pedidos realizados por los clientes.
+        </p>
+
+
+        <div class="tabla-contenedor">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>N° Orden</th>
+                        <th>Cliente</th>
+                        <th>Fecha</th>
+                        <th>Total</th>
+                        <th>Estado</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaOrdenes">
+                    <!-- Las órdenes se cargan con JavaScript -->
+                </tbody>
+
+            </table>
+
+            <p id="sinOrdenes" class="sin-ordenes">
+                No existen órdenes registradas.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <script src="ordenes.js"></script>
+
+</body>
+
+</html>

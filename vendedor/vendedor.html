@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panel Vendedor - Level-Up Gamer</title>
+
+    <link rel="stylesheet" href="vendedor.css">
+</head>
+
+<body>
+
+    <!-- MENÚ LATERAL -->
+    <aside class="menu">
+
+        <h2>LEVEL-UP</h2>
+
+        <p class="rol">
+            VENDEDOR
+        </p>
+
+
+        <!-- INICIO -->
+        <a href="vendedor.html">
+            🏠 Inicio
+        </a>
+
+
+        <!-- PRODUCTOS -->
+        <a href="../index.html">
+            🎮 Productos
+        </a>
+
+
+        <!-- ÓRDENES -->
+        <a href="ordenes.html">
+            📦 Órdenes
+        </a>
+
+
+        <!-- CERRAR SESIÓN -->
+        <a href="#" id="cerrar-sesion">
+            🚪 Cerrar sesión
+        </a>
+
+    </aside>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido">
+
+        <h1>
+            Panel de Vendedor
+        </h1>
+
+        <p class="bienvenida">
+            Gestión de productos y órdenes de Level-Up Gamer
+        </p>
+
+
+        <!-- TARJETAS -->
+        <div class="tarjetas">
+
+
+            <!-- PRODUCTOS -->
+            <div class="tarjeta">
+
+                <h2>
+                    🎮 Productos
+                </h2>
+
+                <p>
+                    Ver catálogo y detalles de productos.
+                </p>
+
+                <button
+                    onclick="window.location.href='../index.html'"
+                >
+                    Ver productos
+                </button>
+
+            </div>
+
+
+            <!-- ÓRDENES -->
+            <div class="tarjeta">
+
+                <h2>
+                    📦 Órdenes
+                </h2>
+
+                <p>
+                    Consultar las órdenes realizadas por los clientes.
+                </p>
+
+                <button
+                    onclick="window.location.href='ordenes.html'"
+                >
+                    Ver órdenes
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="vendedor.js"></script>
+
+</body>
+
+</html>
