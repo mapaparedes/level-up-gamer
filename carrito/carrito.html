@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrito de Compras - Level-Up Gamer</title>
+
+    <link rel="stylesheet" href="carrito.css">
+</head>
+
+<body>
+
+    <main class="contenedor-carrito">
+
+        <h1>Mi Carrito</h1>
+
+        <p class="subtitulo">
+            Revisa los productos antes de finalizar tu compra.
+        </p>
+
+        <!-- Aquí JavaScript mostrará los productos -->
+        <section id="lista-carrito">
+
+            <p id="carrito-vacio">
+                Tu carrito está vacío.
+            </p>
+
+        </section>
+
+        <!-- Resumen de la compra -->
+        <section class="resumen-carrito">
+
+            <h2>Resumen de compra</h2>
+
+            <div class="fila-total">
+                <span>Total:</span>
+                <span id="total-carrito">$0</span>
+            </div>
+
+            <button id="btn-comprar" type="button">
+                Finalizar compra
+            </button>
+
+        </section>
+
+        <a class="volver" href="../index.html">
+            ← Seguir comprando
+        </a>
+
+    </main>
+
+    <script src="carrito.js"></script>
+
+</body>
+
+</html>
