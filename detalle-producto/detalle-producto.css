@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #000000;
+    color: #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Botón Inicio */
+.btn-inicio {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    padding: 10px 18px;
+
+    background-color: #151515;
+    color: #39FF14;
+
+    border: 2px solid #39FF14;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    box-shadow: 0 0 10px #39FF14;
+}
+
+
+/* Contenedor principal */
+.detalle-producto {
+    width: 1000px;
+    max-width: 90%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 50px;
+
+    padding: 40px;
+
+    background-color: rgba(21, 21, 21, 0.95);
+
+    border: 2px solid #39FF14;
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 20px #39FF14,
+        0 0 35px rgba(30, 144, 255, 0.25);
+}
+
+
+/* Imagen */
+.imagen-contenedor {
+    width: 45%;
+}
+
+.imagen-contenedor img {
+    width: 100%;
+
+    border-radius: 12px;
+
+    box-shadow: 0 0 20px #1E90FF;
+}
+
+
+/* Información */
+.informacion-producto {
+    width: 55%;
+}
+
+.informacion-producto h1 {
+    color: #39FF14;
+
+    font-size: 40px;
+
+    margin-top: 0;
+
+    text-shadow: 0 0 10px #39FF14;
+}
+
+.informacion-producto p {
+    color: #D3D3D3;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* Precio */
+.precio {
+    color: #39FF14 !important;
+
+    font-size: 28px !important;
+
+    font-weight: bold;
+}
+
+
+/* Botón carrito */
+#btn-agregar {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 15px;
+
+    background-color: #39FF14;
+    color: #000000;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#btn-agregar:hover {
+    background-color: #1E90FF;
+    color: #FFFFFF;
+
+    box-shadow:
+        0 0 15px #1E90FF,
+        0 0 20px #39FF14;
+
+    transform: scale(1.02);
+}
+
+
+/* Volver */
+.volver {
+    display: block;
+
+    margin-top: 25px;
+
+    color: #39FF14;
+
+    text-align: center;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.volver:hover {
+    color: #1E90FF;
+}
+
+
+/* Celular */
+@media (max-width: 700px) {
+
+    body {
+        align-items: flex-start;
+    }
+
+    .detalle-producto {
+        flex-direction: column;
+
+        margin: 80px 0 30px;
+
+        padding: 25px;
+    }
+
+    .imagen-contenedor,
+    .informacion-producto {
+        width: 100%;
+    }
+
+    .informacion-producto h1 {
+        font-size: 32px;
+    }
+}
