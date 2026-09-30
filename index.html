@@ -1,289 +1,460 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- indica idioma es español -->
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Level-Up Gamer</title>
-    <!-- Conectamos la página con nuestra hoja de estilos externa -->
+
+    <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
-    
+
 <body>
-<!-- Encabezado de la tienda -->
-   <header>
-    <h1>Level-Up-Gamer</h1>
-    <p>Tu tienda gamer con despachos a todo Chile</p>
-     
-    <!-- Menú principal con enlaces a secciones de esta página -->
-    <nav aria-label="Navegación principal">
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#productos">Productos</a></li>
-        <!-- Abre la página Nosotros creada por Jordan -->
-        <li><a href="nosotros/nosotros.html">Nosotros</a></li>
 
-                <!-- Abre la página que reúne los artículos del blog -->
-        <li><a href="blogs/blogs.html">Blogs</a></li>
+    <!--   
+         ENCABEZADO
+    ========================================== -->
 
-        <!-- Abre la página de registro dentro de su carpeta -->
-        <li><a href="registro/registro.html">Registrarse</a></li>
+    <header class="encabezado">
 
-        <!-- Abre la página de inicio de sesión -->
-        <li><a href="login/login.html">Iniciar sesión</a></li>
+        <div class="barra-navegacion">
 
-        <!-- Abre la página del carrito de compras -->
-        <li><a href="carrito/carrito.html">Carrito</a></li>
+            <!-- Logo / nombre de la tienda -->
+           <a href="index.html" class="logo">
+          <img
+            src="img/logo-level-up.png"
+             alt="Level-Up Gamer"
+              lass="logo-imagen"
+             >
+            </a>
+            <!-- Menú principal -->
+            <nav aria-label="Navegación principal">
 
-        
-    </ul>
-</nav>
-   </header>
+                <ul>
 
- <!-- Contenido principal de esta página --> 
-  <main>
+                    <li>
+                        <a href="#inicio">Inicio</a>
+                    </li>
 
-    <!-- Presentación de la tienda -->
-     <section id="inicio">
-        <h2>Bienvenidos a  Level-Up Gamer</h2>
-        <p>Encuentra juegos, consolas y accesorios para tu próximo desafio</p>
-     </section>
+                    <li>
+                        <a href="#productos">Productos</a>
+                    </li>
 
-     <!-- Presentación de los productos -->
-     <!-- Catálogo de productos de la tienda -->
-<section id="productos">
-    <h2>Nuestros productos</h2>
-    <p>Explora nuestro catálogo de productos para gamers.</p>
+                    <li>
+                        <a href="nosotros/nosotros.html">
+                            Nosotros
+                        </a>
+                    </li>
 
-    <!-- Contenedor donde agruparemos las tarjetas -->
-    <div class="lista-productos">
+                    <li>
+                        <a href="blogs/blogs.html">
+                            Blogs
+                        </a>
+                    </li>
 
-        <!-- Cada article representa un producto del catálogo -->
-        <article class="tarjeta-producto">
+                    <li>
+                        <a href="registro/registro.html">
+                            Registro
+                        </a>
+                    </li>
 
-            <!-- Imagen del producto y descripción alternativa -->
-            <a href="detalle-producto/detalle-producto.html?producto=catan">
-    <img
-        src="img/catan.jpg"
-        alt="Caja del juego de mesa Catan"
-        class="imagen-producto"
-    >
-</a>    
+                    <li>
+                        <a href="login/login.html">
+                            Login
+                        </a>
+                    </li>
 
-            <!-- Nombre del producto -->
-            <h3>Catan</h3>
+                    <!--
+                        Solo se mostrará cuando exista
+                        una sesión iniciada
+                    -->
+                    <li
+                        id="opcion-cerrar-sesion"
+                        style="display: none;"
+                    >
+                        <a href="#" id="cerrar-sesion">
+                            Cerrar sesión
+                        </a>
+                    </li>
 
-            <!-- Descripción breve -->
-            <p>
-                Juego de estrategia donde los jugadores compiten
-                por colonizar la isla de Catan. Ideal para compartir
-                con amigos o en familia.
-            </p>
+                    <li>
+                        <a
+                            href="carrito/carrito.html"
+                            class="enlace-carrito"
+                        >
+                            🛒 Carrito
+                        </a>
+                    </li>
 
-            <!-- Precio de ejemplo para esta demostración -->
-            <p class="precio-producto">$29.990 CLP</p>
+                </ul>
 
-            <!-- Los atributos data guardan los datos que leerá JavaScript -->
-            <button
-                type="button"
-                class="boton-agregar"
-                data-nombre="Catan"
-                data-precio="29990"
-            >
-                Agregar al carrito
-            </button>
-                
-        </article>
+            </nav>
 
-        <!-- Segunda tarjeta del catálogo -->
-        <article class="tarjeta-producto">
+        </div>
 
-            <!-- Imagen del juego -->
-        <a href="detalle-producto/detalle-producto.html?producto=carcassonne">
-        <img
-           src="img/carcassonne.jpg"
-           alt="Caja del juego de mesa Carcassonne"
-           class="imagen-producto"
-    >
+    </header>
+
+
+    <!-- =========================================
+         CONTENIDO PRINCIPAL
+    ========================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             PORTADA / HERO
+        ====================================== -->
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-contenido">
+
+                <p class="hero-marca">
+                    LEVEL-UP GAMER
+                </p>
+
+                <h1>
+                    TU PRÓXIMA PARTIDA
+                    <span>COMIENZA AQUÍ</span>
+                </h1>
+
+                <p class="hero-descripcion">
+                    Juegos, consolas y accesorios para gamers.
+                    Encuentra todo lo que necesitas para llevar
+                    tu experiencia al siguiente nivel.
+                </p>
+
+
+                <!-- Botones principales -->
+                <div class="hero-botones">
+
+                 <a
+                      href="#productos"
+                     class="boton-principal"
+    > 
+                     VER PRODUCTOS
+                </a>
+
+</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CATÁLOGO
+        ====================================== -->
+
+        <section id="productos">
+
+            <div class="titulo-productos">
+
+                <p class="subtitulo-seccion">
+                    CATÁLOGO
+                </p>
+
+                <h2>
+                    NUESTROS PRODUCTOS
+                </h2>
+
+                <p>
+                    Explora nuestra selección de juegos,
+                    consolas y accesorios para gamers.
+                </p>
+
+            </div>
+
+
+            <!-- Contenedor de productos -->
+            <div class="lista-productos">
+
+
+                <!-- =================================
+                     PRODUCTO 1 - CATAN
+                ================================== -->
+
+                <article class="tarjeta-producto">
+
+                    <a
+                        href="detalle-producto/detalle-producto.html?producto=catan"
+                    >
+                        <img
+                            src="img/catan.jpg"
+                            alt="Caja del juego de mesa Catan"
+                            class="imagen-producto"
+                        >
+                    </a>
+
+                    <h3>Catan</h3>
+
+                    <p>
+                        Juego de estrategia donde los jugadores
+                        compiten por colonizar la isla de Catan.
+                        Ideal para compartir con amigos o familia.
+                    </p>
+
+                    <p class="precio-producto">
+                        $29.990 CLP
+                    </p>
+
+                    <button
+                        type="button"
+                        class="boton-agregar"
+                        data-nombre="Catan"
+                        data-precio="29990"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </article>
+
+
+                <!-- =================================
+                     PRODUCTO 2 - CARCASSONNE
+                ================================== -->
+
+                <article class="tarjeta-producto">
+
+                    <a
+                        href="detalle-producto/detalle-producto.html?producto=carcassonne"
+                    >
+                        <img
+                            src="img/carcassonne.jpg"
+                            alt="Caja del juego de mesa Carcassonne"
+                            class="imagen-producto"
+                        >
+                    </a>
+
+                    <h3>Carcassonne</h3>
+
+                    <p>
+                        Construye un paisaje medieval colocando
+                        fichas de ciudades, caminos y campos.
+                        Un juego de estrategia para compartir.
+                    </p>
+
+                    <p class="precio-producto">
+                        $24.990 CLP
+                    </p>
+
+                    <button
+                        type="button"
+                        class="boton-agregar"
+                        data-nombre="Carcassonne"
+                        data-precio="24990"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </article>
+
+
+                <!-- =================================
+                     PRODUCTO 3 - PLAYSTATION 5
+                ================================== -->
+
+                <article class="tarjeta-producto">
+
+                    <a
+                        href="detalle-producto/detalle-producto.html?producto=ps5"
+                    >
+                        <img
+                            src="img/playstation5.jpg"
+                            alt="Consola PlayStation 5 con su control"
+                            class="imagen-producto"
+                        >
+                    </a>
+
+                    <h3>PlayStation 5</h3>
+
+                    <p>
+                        Disfruta tus juegos favoritos con gráficos
+                        envolventes y tiempos de carga rápidos.
+                        Incluye un control DualSense.
+                    </p>
+
+                    <p class="precio-producto">
+                        $549.990 CLP
+                    </p>
+
+                    <button
+                        type="button"
+                        class="boton-agregar"
+                        data-nombre="PlayStation 5"
+                        data-precio="549990"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </article>
+
+
+                <!-- =================================
+                     PRODUCTO 4 - SILLA GAMER
+                ================================== -->
+
+                <article class="tarjeta-producto">
+
+                    <a
+                        href="detalle-producto/detalle-producto.html?producto=silla"
+                    >
+                        <img
+                            src="img/silla-gamer.jpg"
+                            alt="Silla gamer Secretlab Titan"
+                            class="imagen-producto"
+                        >
+                    </a>
+
+                    <h3>
+                        Silla Gamer Secretlab Titan
+                    </h3>
+
+                    <p>
+                        Completa tu espacio gamer con una silla
+                        de respaldo reclinable y apoyabrazos
+                        ajustables para mayor comodidad.
+                    </p>
+
+                    <p class="precio-producto">
+                        $349.990 CLP
+                    </p>
+
+                    <button
+                        type="button"
+                        class="boton-agregar"
+                        data-nombre="Silla Gamer Secretlab Titan"
+                        data-precio="349990"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </article>
+
+
+                <!-- =================================
+                     PRODUCTO 5 - MOUSE
+                ================================== -->
+
+                <article class="tarjeta-producto">
+
+                    <a
+                        href="detalle-producto/detalle-producto.html?producto=mouse"
+                    >
+                        <img
+                            src="img/mouse-logitech.jpg"
+                            alt="Mouse gamer Logitech G502 HERO"
+                            class="imagen-producto"
+                        >
+                    </a>
+
+                    <h3>
+                        Mouse Gamer Logitech G502 HERO
+                    </h3>
+
+                    <p>
+                        Mejora el control en tus partidas
+                        con un mouse de alta precisión
+                        y botones personalizables.
+                    </p>
+
+                    <p class="precio-producto">
+                        $49.990 CLP
+                    </p>
+
+                    <button
+                        type="button"
+                        class="boton-agregar"
+                        data-nombre="Mouse Gamer Logitech G502 HERO"
+                        data-precio="49990"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </article>
+
+
+                <!-- =================================
+                     PRODUCTO 6 - AURICULARES
+                ================================== -->
+
+                <article class="tarjeta-producto">
+
+                    <a
+                        href="detalle-producto/detalle-producto.html?producto=audifonos"
+                    >
+                        <img
+                            src="img/audifonos-hyperx.jpg"
+                            alt="Auriculares gamer HyperX Cloud II con micrófono"
+                            class="imagen-producto"
+                        >
+                    </a>
+
+                    <h3>
+                        Auriculares Gamer HyperX Cloud II
+                    </h3>
+
+                    <p>
+                        Disfruta tus partidas con almohadillas
+                        cómodas y un micrófono desmontable
+                        para comunicarte con tu equipo.
+                    </p>
+
+                    <p class="precio-producto">
+                        $79.990 CLP
+                    </p>
+
+                    <button
+                        type="button"
+                        class="boton-agregar"
+                        data-nombre="Auriculares Gamer HyperX Cloud II"
+                        data-precio="79990"
+                    >
+                        Agregar al carrito
+                    </button>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         PIE DE PÁGINA
+    ========================================== -->
+
+    <footer>
+
+        <h3>LEVEL-UP GAMER</h3>
+
+        <p>
+            Tu tienda gamer con despachos a todo Chile.
+        </p>
+
+        <a href="contacto/contacto.html">
+            Contáctanos
         </a>
 
-            <!-- Nombre del producto -->
-            <h3>Carcassonne</h3>
+        <p>
+            Level-Up Gamer — Proyecto académico.
+        </p>
 
-            <!-- Descripción breve -->
-            <p>
-                Construye un paisaje medieval colocando fichas de ciudades,
-                caminos y campos. Un juego de estrategia ideal para
-                compartir con amigos o en familia.
-            </p>
-
-            <!-- Precio ilustrativo para el proyecto académico -->
-            <p class="precio-producto">$24.990 CLP</p>
-
-            <!-- Segundo producto disponible para agregar al carrito -->
-            <button
-                type="button"
-                class="boton-agregar"
-                data-nombre="Carcassonne"
-                data-precio="24990"
-            >
-                Agregar al carrito
-            </button>
-
-        </article>
-<!-- Tercera tarjeta: consola -->
-<article class="tarjeta-producto">
-
-    <!-- Imagen de la consola -->
-    <a href="detalle-producto/detalle-producto.html?producto=ps5">
-    <img
-        src="img/playstation5.jpg"
-        alt="Consola PlayStation 5 con su control"
-        class="imagen-producto"
-    >
-    </a>
-    <h3>PlayStation 5</h3>
-
-    <p>
-        Disfruta tus juegos favoritos con gráficos envolventes
-        y tiempos de carga rápidos. Incluye un control DualSense.
-    </p>
-
-    <!-- Precio ilustrativo para el proyecto académico -->
-    <p class="precio-producto">$549.990 CLP</p>
-
-    <!-- Datos que utilizará catalogo.js para agregar el producto -->
-    <button
-        type="button"
-        class="boton-agregar"
-        data-nombre="PlayStation 5"
-        data-precio="549990"
-    >
-        Agregar al carrito
-    </button>
-
-</article>
-
-    <!-- Cuarta tarjeta: silla gamer -->
-<article class="tarjeta-producto">
-
-    <!-- Imagen de la silla -->
-    <a href="detalle-producto/detalle-producto.html?producto=silla">
-    <img
-        src="img/silla-gamer.jpg"
-        alt="Silla gamer Secretlab Titan"
-        class="imagen-producto"
-    >
-    </a>
-
-    <h3>Silla Gamer Secretlab Titan</h3>
-
-    <p>
-        Completa tu espacio gamer con una silla de respaldo
-        reclinable y apoyabrazos ajustables para mayor comodidad.
-    </p>
-
-    <!-- Precio ilustrativo para el proyecto académico -->
-    <p class="precio-producto">$349.990 CLP</p>
-
-    <!-- Mantén el precio numérico sin puntos ni símbolos -->
-    <button
-        type="button"
-        class="boton-agregar"
-        data-nombre="Silla Gamer Secretlab Titan"
-        data-precio="349990"
-    >
-        Agregar al carrito
-    </button>
-
-</article>
-<!-- Quinta tarjeta: mouse gamer -->
-<article class="tarjeta-producto">
-
-    <a href="detalle-producto/detalle-producto.html?producto=mouse">
-    <img
-        src="img/mouse-logitech.jpg"
-        alt="Mouse gamer Logitech G502 HERO"
-        class="imagen-producto"
-    >
-    </a>
+    </footer>
 
 
-    <h3>Mouse Gamer Logitech G502 HERO</h3>
-
-    <p>
-        Mejora el control en tus partidas con un mouse de alta
-        precisión y botones personalizables.
-    </p>
-
-    <!-- Precio ilustrativo para el proyecto académico -->
-    <p class="precio-producto">$49.990 CLP</p>
-
-    <!-- Datos que leerá el JavaScript del catálogo -->
-    <button
-        type="button"
-        class="boton-agregar"
-        data-nombre="Mouse Gamer Logitech G502 HERO"
-        data-precio="49990"
-    >
-        Agregar al carrito
-    </button>
-
-</article>
-
-<!-- Sexta tarjeta: auriculares gamer -->
-<article class="tarjeta-producto">
-
-    <a href="detalle-producto/detalle-producto.html?producto=audifonos">
-    <img
-        src="img/audifonos-hyperx.jpg"
-        alt="Auriculares gamer HyperX Cloud II con micrófono"
-        class="imagen-producto"
-    >
-    </a>
-
-    <h3>Auriculares Gamer HyperX Cloud II</h3>
-
-    <p>
-        Disfruta tus partidas con almohadillas cómodas y un
-        micrófono desmontable para comunicarte con tu equipo.
-    </p>
-
-    <!-- Precio ilustrativo para el proyecto académico -->
-    <p class="precio-producto">$79.990 CLP</p>
-
-    <!-- Precio numérico sin puntos ni símbolos -->
-    <button
-        type="button"
-        class="boton-agregar"
-        data-nombre="Auriculares Gamer HyperX Cloud II"
-        data-precio="79990"
-    >
-        Agregar al carrito
-    </button>
-
-</article>
-
-    </div>
-</section>
-
-        
-  </main>
-
-   <!-- Pie de página -->
-    <!-- Pie de página con información y acceso a contacto -->
-<footer>
-    <p>Level-Up Gamer — Proyecto académico.</p>
-
-    <!-- Enlace al formulario de contacto-->
-    <a href="contacto/contacto.html">Contáctanos</a>
-
-    <p>Tienda online con despachos a todo Chile.</p>
-</footer>
-
-    <!-- Activa los botones de las tarjetas de productos -->
+    <!-- JavaScript del catálogo y sesión -->
     <script src="js/catalogo.js"></script>
+
 </body>
+
 </html>

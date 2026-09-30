@@ -36,7 +36,7 @@ body {
 
 /* Título */
 h2 {
-    color: #39FF14;
+    color: #e4b50b;
     margin: 0 0 10px 0;
 
     text-shadow: 0 0 10px #39FF14;
@@ -153,7 +153,7 @@ p {
 
 /* Enlace Registrarse */
 a {
-    color: #39FF14;
+    color: #eff2ef;
     font-weight: bold;
     text-decoration: none;
 }
@@ -161,8 +161,22 @@ a {
 a:hover {
     text-decoration: underline;
 }
+/* Logo de inicio de sesión */
 
+.logo-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
 
+.logo-login img {
+    display: block;
+    width: 320px;
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+}
 /* Diseño para celular */
 @media (max-width: 600px) {
 
