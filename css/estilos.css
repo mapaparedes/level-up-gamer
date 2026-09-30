@@ -193,3 +193,36 @@ footer a:hover,
 footer a:focus-visible {
     color: #1E90FF;
 }
+/* Distribuye verticalmente el contenido de cada tarjeta */
+.tarjeta-producto {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Empuja el botón hacia el borde inferior de la tarjeta */
+.tarjeta-producto .boton-agregar {
+    margin-top: auto;
+}
+
+/* Centra el contenido de la sección de bienvenida */
+#inicio {
+    text-align: center;
+}
+
+/* Organiza el contenido de cada tarjeta verticalmente */
+.tarjeta-producto {
+    display: flex;
+    flex-direction: column;
+}
+
+/* El espacio libre queda antes del precio */
+.tarjeta-producto .precio-producto {
+    margin-top: auto;
+    padding-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* El botón queda inmediatamente después del precio */
+.tarjeta-producto .boton-agregar {
+    margin-top: 0;
+}
