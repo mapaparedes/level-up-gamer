@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
+    
 <body>
 <!-- Encabezado de la tienda -->
    <header>
@@ -21,7 +22,8 @@
     <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#productos">Productos</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
+        <!-- Abre la página Nosotros creada por Jordan -->
+        <li><a href="nosotros/nosotros.html">Nosotros</a></li>
 
                 <!-- Abre la página que reúne los artículos del blog -->
         <li><a href="blogs/blogs.html">Blogs</a></li>
@@ -31,6 +33,9 @@
 
         <!-- Abre la página de inicio de sesión -->
         <li><a href="login/login.html">Iniciar sesión</a></li>
+
+        <!-- Abre la página del carrito de compras -->
+        <li><a href="carrito/carrito.html">Carrito</a></li>
     </ul>
 </nav>
    </header>
@@ -76,11 +81,12 @@
             <!-- Precio de ejemplo para esta demostración -->
             <p class="precio-producto">$29.990 CLP</p>
 
-            <!-- Botón deshabilitado hasta implementar el carrito -->
+            <!-- Los atributos data guardan los datos que leerá JavaScript -->
             <button
                 type="button"
                 class="boton-agregar"
-                disabled
+                data-nombre="Catan"
+                data-precio="29990"
             >
                 Agregar al carrito
             </button>
@@ -110,11 +116,12 @@
             <!-- Precio ilustrativo para el proyecto académico -->
             <p class="precio-producto">$24.990 CLP</p>
 
-            <!-- Se habilitará cuando implementemos el carrito -->
+            <!-- Segundo producto disponible para agregar al carrito -->
             <button
                 type="button"
                 class="boton-agregar"
-                disabled
+                data-nombre="Carcassonne"
+                data-precio="24990"
             >
                 Agregar al carrito
             </button>
@@ -123,22 +130,15 @@
     </div>
 </section>
 
-     <!-- Información de la tienda -->
-     <section id="nosotros">
-        <h2>Sobre nosotros</h2>
-        <p>
-            Somos una tienda online dedicada a la comunidad gamer
-            en Chile, con despachos a todo el país.
-        </p>
-    </section>
-
-
-    
+        
   </main>
 
    <!-- Pie de página -->
     <footer>
         <p>Level-UP Gamer - Proyecto Academico</p>
     </footer>
+
+    <!-- Activa los botones de las tarjetas de productos -->
+    <script src="js/catalogo.js"></script>
 </body>
 </html>

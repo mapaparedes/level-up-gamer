@@ -139,30 +139,7 @@ function disminuirCantidad(indice) {
     mostrarCarrito();
 }
 
-// Agrega un producto al carrito
-function agregarAlCarrito(producto) {
 
-    // Buscamos si el producto ya está en el carrito
-    const productoExistente = carrito.find(
-        item => item.nombre === producto.nombre
-    );
-
-    // Si ya existe, aumentamos su cantidad
-    if (productoExistente) {
-        productoExistente.cantidad++;
-    } else {
-
-        // Si no existe, lo agregamos con cantidad 1
-        carrito.push({
-            nombre: producto.nombre,
-            precio: producto.precio,
-            cantidad: 1
-        });
-    }
-
-    guardarCarrito();
-    mostrarCarrito();
-}
 // Simulación de finalizar compra
 btnComprar.addEventListener("click", function () {
 
