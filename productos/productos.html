@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Productos - Level-Up Gamer</title>
+
+    <link rel="stylesheet" href="productos.css">
+</head>
+
+<body>
+
+    <main class="contenedor-productos">
+
+        <section class="encabezado">
+            <h1>Nuestros Productos</h1>
+            <p>Todo lo que necesitas para subir de nivel tu setup gamer.</p>
+        </section>
+
+        <!-- Filtros por categoría (los crea JavaScript) -->
+        <nav id="filtros" class="filtros"></nav>
+
+        <!-- Aquí JavaScript muestra los productos -->
+        <section id="lista-productos" class="grilla-productos"></section>
+
+        <div class="enlaces">
+            <a class="ir-carrito" href="../carrito/carrito.html">
+                Ver carrito (<span id="contador-carrito">0</span>)
+            </a>
+            <a class="volver" href="../index.html">← Volver al inicio</a>
+        </div>
+
+    </main>
+
+    <!-- Mensaje al agregar -->
+    <div id="aviso" class="aviso"></div>
+
+    <script src="productos.js"></script>
+
+</body>
+
+</html>
